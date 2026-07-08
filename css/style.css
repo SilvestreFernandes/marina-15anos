@@ -1,0 +1,424 @@
+/* ==========================================================
+   Marina · 15 Anos — convite digital
+   Paleta: vinho profundo, dourado, rosé e champanhe
+   ========================================================== */
+
+:root {
+  --vinho-escuro: #3B0F1F;
+  --vinho: #571B2E;
+  --rose: #D98CA4;
+  --ouro: #C9A24B;
+  --ouro-claro: #EBCF8E;
+  --champanhe: #FBF5EC;
+  --tinta: #40222D;
+
+  --fonte-script: 'Bodoni Moda', serif;
+  --fonte-serif: 'Cormorant Garamond', serif;
+  --fonte-sans: 'Jost', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fonte-serif);
+  color: var(--tinta);
+  background: var(--champanhe);
+  line-height: 1.7;
+  font-size: 1.125rem;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- utilitários ---------- */
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.centro { text-align: center; }
+
+.eyebrow {
+  font-family: var(--fonte-sans);
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.eyebrow.escuro { color: var(--vinho); }
+.eyebrow.claro  { color: var(--ouro-claro); }
+
+.titulo-secao {
+  font-family: var(--fonte-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  margin: 0.4rem 0 2.2rem;
+  color: var(--vinho-escuro);
+}
+
+.titulo-secao.claro { color: var(--champanhe); }
+
+/* ---------- seções ---------- */
+
+.secao { padding: 5.5rem 0; }
+
+.secao-clara {
+  background: var(--champanhe);
+  text-align: center;
+}
+
+.secao-vinho {
+  background: linear-gradient(170deg, var(--vinho) 0%, var(--vinho-escuro) 100%);
+  color: #F3E4D8;
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+  min-height: 100svh;
+  background: linear-gradient(160deg, #4A1527 0%, var(--vinho-escuro) 55%, #2B0A16 100%);
+  display: flex;
+  align-items: stretch;
+  padding: clamp(0.9rem, 2.5vw, 1.8rem);
+}
+
+.hero-frame {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201,162,75,0.55);
+  outline: 1px solid rgba(201,162,75,0.25);
+  outline-offset: 5px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  max-height: 100svh;
+  object-fit: contain;
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.som-toggle {
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--fonte-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ouro-claro);
+  background: rgba(43,10,22,0.55);
+  border: 1px solid rgba(201,162,75,0.55);
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.som-toggle:hover,
+.som-toggle:focus-visible {
+  background: rgba(43,10,22,0.8);
+  transform: translateY(-1px);
+}
+
+.som-toggle:focus-visible {
+  outline: 2px solid var(--ouro-claro);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   CONTAGEM REGRESSIVA
+   ========================================================== */
+
+.countdown {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(0.6rem, 3vw, 1.6rem);
+  flex-wrap: wrap;
+}
+
+.cd-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 74px;
+}
+
+.cd-num {
+  font-family: var(--fonte-serif);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  color: var(--vinho);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.cd-label {
+  font-family: var(--fonte-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ouro);
+  margin-top: 0.5rem;
+}
+
+.cd-sep {
+  font-size: 2rem;
+  color: var(--rose);
+  align-self: center;
+}
+
+.cd-chegou {
+  font-family: var(--fonte-script);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--vinho);
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================
+   MENSAGEM
+   ========================================================== */
+
+.mensagem-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 400px) 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.selo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.selo-wrap img {
+  width: min(70%, 260px);
+  height: auto;
+  filter: drop-shadow(0 10px 26px rgba(0,0,0,0.45));
+}
+
+.carta p { margin-bottom: 1.1rem; color: #F0DCCB; }
+
+.carta .assinatura-mini {
+  font-family: var(--fonte-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ouro-claro);
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   LOCAL
+   ========================================================== */
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid rgba(201,162,75,0.35);
+  padding: 2rem 1.4rem;
+}
+
+.info-icone {
+  color: var(--ouro);
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+.info-card h3 {
+  font-family: var(--fonte-sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--vinho);
+  margin-bottom: 0.7rem;
+}
+
+.info-card p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.mapa-wrap {
+  border: 1px solid rgba(201,162,75,0.45);
+  padding: 8px;
+  background: #fff;
+}
+
+.mapa-wrap iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+/* ==========================================================
+   RSVP
+   ========================================================== */
+
+.rsvp-texto {
+  max-width: 520px;
+  margin: 0 auto 2.2rem;
+  color: #F0DCCB;
+}
+
+.rsvp-texto strong { color: var(--ouro-claro); font-weight: 600; }
+
+.botao-ouro {
+  display: inline-block;
+  font-family: var(--fonte-sans);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--vinho-escuro);
+  background: linear-gradient(120deg, var(--ouro) 0%, var(--ouro-claro) 50%, var(--ouro) 100%);
+  background-size: 200% 100%;
+  padding: 1.05rem 2.6rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: background-position 0.5s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.botao-ouro:hover,
+.botao-ouro:focus-visible {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.botao-ouro:focus-visible {
+  outline: 2px solid var(--ouro-claro);
+  outline-offset: 4px;
+}
+
+.rsvp-nota {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--rose);
+  margin-top: 1.4rem;
+}
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+
+.rodape {
+  background: #2B0A16;
+  text-align: center;
+  padding: 3.5rem 1.5rem 3rem;
+}
+
+.rodape-monograma {
+  width: 80px;
+  margin: 0 auto 0.8rem;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+.rodape-frase {
+  font-family: var(--fonte-script);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--ouro-claro);
+}
+
+.rodape-data {
+  font-family: var(--fonte-sans);
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.45em;
+  color: var(--rose);
+  margin-top: 0.4rem;
+}
+
+/* ==========================================================
+   REVEAL AO ROLAR
+   ========================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================
+   RESPONSIVO
+   ========================================================== */
+
+@media (max-width: 760px) {
+  .secao { padding: 4rem 0; }
+
+  .mensagem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selo-wrap {
+    margin: 0 auto;
+  }
+
+  .carta { text-align: center; }
+
+  .mapa-wrap iframe { height: 300px; }
+
+  .cd-sep { display: none; }
+}
+
+/* ==========================================================
+   MOVIMENTO REDUZIDO
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

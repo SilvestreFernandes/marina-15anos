@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marina · 15 Anos</title>
+  <meta name="description" content="Convite para a festa de 15 anos de Marina Fernandes da Silva — 31 de outubro de 2026, Goiânia.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HERO (vídeo-convite) ============ -->
+  <header class="hero" id="inicio">
+    <div class="hero-frame">
+      <video
+        class="hero-video"
+        src="video/convite-hero.mp4"
+        poster="video/convite-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-label="Convite animado para os 15 anos de Marina, em um jardim">
+      </video>
+
+      <button class="som-toggle" id="som-toggle" type="button" aria-pressed="false">
+        <span id="som-icone" aria-hidden="true">🔇</span>
+        <span id="som-texto">Ativar som</span>
+      </button>
+
+      <p class="sr-only">
+        Marina Fernandes da Silva — Quinze Anos. 31 de outubro de 2026, Goiânia.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ CONTAGEM REGRESSIVA ============ -->
+    <section class="secao secao-clara" id="contagem">
+      <div class="container reveal">
+        <p class="eyebrow escuro">Falta pouco</p>
+        <h2 class="titulo-secao">Contagem regressiva</h2>
+
+        <div class="countdown" id="countdown" role="timer" aria-live="polite">
+          <div class="cd-item">
+            <span class="cd-num" id="cd-dias">--</span>
+            <span class="cd-label">dias</span>
+          </div>
+          <span class="cd-sep" aria-hidden="true">·</span>
+          <div class="cd-item">
+            <span class="cd-num" id="cd-horas">--</span>
+            <span class="cd-label">horas</span>
+          </div>
+          <span class="cd-sep" aria-hidden="true">·</span>
+          <div class="cd-item">
+            <span class="cd-num" id="cd-min">--</span>
+            <span class="cd-label">minutos</span>
+          </div>
+          <span class="cd-sep" aria-hidden="true">·</span>
+          <div class="cd-item">
+            <span class="cd-num" id="cd-seg">--</span>
+            <span class="cd-label">segundos</span>
+          </div>
+        </div>
+
+        <p class="cd-chegou" id="cd-chegou" hidden>O grande dia chegou! ✨</p>
+      </div>
+    </section>
+
+    <!-- ============ MENSAGEM ============ -->
+    <section class="secao secao-vinho" id="mensagem">
+      <div class="container mensagem-grid">
+        <figure class="selo-wrap reveal">
+          <img src="img/selo-mf.png" alt="Selo dourado com o monograma MF">
+        </figure>
+
+        <div class="carta reveal">
+          <h2 class="titulo-secao claro">Venha fazer parte desse dia especial</h2>
+          <p>
+            Depois de imaginar esse dia um milhão de vezes, ele finalmente
+            vai acontecer. Pra mim, isso é sobre celebrar com quem eu mais
+            gosto — música boa, gente querida e uma noite pra guardar.
+          </p>
+          <p>
+            Separa a agenda, capricha no look e vem comemorar comigo.
+            Sua presença já é o presente que eu mais quero.
+          </p>
+          <p class="assinatura-mini">— Marina</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DATA, HORA E LOCAL ============ -->
+    <section class="secao secao-clara" id="local">
+      <div class="container reveal">
+        <p class="eyebrow escuro">Onde e quando</p>
+        <h2 class="titulo-secao">A celebração</h2>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="info-icone" aria-hidden="true">✦</span>
+            <h3>Data</h3>
+            <p>Sábado<br>31 de outubro de 2026</p>
+          </div>
+          <div class="info-card">
+            <span class="info-icone" aria-hidden="true">✦</span>
+            <h3>Horário</h3>
+            <p>A partir das 21h</p>
+          </div>
+          <div class="info-card">
+            <span class="info-icone" aria-hidden="true">✦</span>
+            <h3>Local</h3>
+            <p>Edifício Suíça<br>Rua C 259 — Goiânia, GO</p>
+          </div>
+        </div>
+
+        <div class="mapa-wrap">
+          <iframe
+            title="Mapa do local da festa — Ed. Suíça, Goiânia"
+            src="https://www.google.com/maps?q=-16.7149858,-49.2716656&z=17&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section class="secao secao-vinho" id="rsvp">
+      <div class="container centro reveal">
+        <p class="eyebrow claro">Confirmação de presença</p>
+        <h2 class="titulo-secao claro">Você vem celebrar comigo?</h2>
+        <p class="rsvp-texto">
+          Confirma sua presença até <strong>5 de outubro de 2026</strong>
+          pra gente garantir tudo certinho pra festa.
+        </p>
+        <a class="botao-ouro" id="btn-rsvp" href="#" target="_blank" rel="noopener">
+          Confirmar presença
+        </a>
+        <p class="rsvp-nota">A confirmação é feita por um formulário rápido — leva menos de um minuto.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape">
+    <img class="rodape-monograma" src="img/monograma-mf.png" alt="" aria-hidden="true">
+    <p class="rodape-frase">Te espero lá</p>
+    <p class="rodape-data">31 · 10 · 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
