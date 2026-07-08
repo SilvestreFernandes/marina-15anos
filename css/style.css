@@ -4,13 +4,13 @@
    ========================================================== */
 
 :root {
-  --vinho-escuro: #3B0F1F;
-  --vinho: #571B2E;
-  --rose: #D98CA4;
+  --vinho-escuro: #4A0E29;
+  --vinho: #7A1743;
+  --rose: #F0A8C4;
   --ouro: #C9A24B;
   --ouro-claro: #EBCF8E;
   --champanhe: #FBF5EC;
-  --tinta: #40222D;
+  --tinta: #5B1030;
 
   --fonte-script: 'Bodoni Moda', serif;
   --fonte-serif: 'Cormorant Garamond', serif;
@@ -82,7 +82,7 @@ img { max-width: 100%; display: block; }
 
 .hero {
   min-height: 100svh;
-  background: linear-gradient(160deg, #4A1527 0%, var(--vinho-escuro) 55%, #2B0A16 100%);
+  background: linear-gradient(160deg, #611635 0%, var(--vinho-escuro) 55%, #380A1E 100%);
   display: flex;
   align-items: stretch;
   padding: clamp(0.9rem, 2.5vw, 1.8rem);
@@ -134,7 +134,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ouro-claro);
-  background: rgba(43,10,22,0.55);
+  background: rgba(58,10,30,0.55);
   border: 1px solid rgba(201,162,75,0.55);
   padding: 0.55rem 0.9rem;
   cursor: pointer;
@@ -144,7 +144,7 @@ img { max-width: 100%; display: block; }
 
 .som-toggle:hover,
 .som-toggle:focus-visible {
-  background: rgba(43,10,22,0.8);
+  background: rgba(58,10,30,0.8);
   transform: translateY(-1px);
 }
 
@@ -343,7 +343,7 @@ img { max-width: 100%; display: block; }
    ========================================================== */
 
 .rodape {
-  background: #2B0A16;
+  background: #380A1E;
   text-align: center;
   padding: 3.5rem 1.5rem 3rem;
 }
