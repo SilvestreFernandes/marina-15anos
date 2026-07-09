@@ -51,8 +51,10 @@ img { max-width: 100%; display: block; }
   padding: 2rem;
   text-align: center;
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.06), transparent 60%),
-    linear-gradient(160deg, #D41E74 0%, var(--vinho-escuro) 55%, #55123A 100%);
+    linear-gradient(160deg, rgba(212,30,116,0.55) 0%, rgba(122,14,66,0.72) 55%, rgba(85,18,58,0.85) 100%),
+    url('../img/estampa-cereja.jpg');
+  background-size: cover;
+  background-position: center;
   transition: opacity 0.7s ease;
 }
 
@@ -211,6 +213,14 @@ img { max-width: 100%; display: block; }
   position: relative;
   background: linear-gradient(170deg, var(--vinho) 0%, var(--vinho-escuro) 100%);
   color: #F3E4D8;
+}
+
+#rsvp {
+  background:
+    linear-gradient(170deg, rgba(194,24,104,0.82) 0%, rgba(85,18,58,0.92) 100%),
+    url('../img/marina-retrato.jpg');
+  background-size: cover;
+  background-position: center 30%;
 }
 
 /* ==========================================================
