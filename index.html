@@ -14,14 +14,38 @@
 </head>
 <body>
 
+  <!-- ============ ENVELOPE (porta de entrada) ============ -->
+  <div class="envelope-gate" id="envelope-gate">
+    <div class="brilhos" aria-hidden="true">
+      <span class="brilho" style="top:12%; left:18%; font-size:0.9rem; animation-delay:0s;">✦</span>
+      <span class="brilho" style="top:22%; left:78%; font-size:0.6rem; animation-delay:0.6s;">✦</span>
+      <span class="brilho" style="top:68%; left:12%; font-size:0.7rem; animation-delay:1.2s;">✦</span>
+      <span class="brilho" style="top:78%; left:82%; font-size:0.9rem; animation-delay:0.3s;">✦</span>
+      <span class="brilho" style="top:38%; left:88%; font-size:0.5rem; animation-delay:1.8s;">✦</span>
+      <span class="brilho" style="top:85%; left:30%; font-size:0.6rem; animation-delay:2.2s;">✦</span>
+      <span class="brilho" style="top:8%;  left:60%; font-size:0.5rem; animation-delay:1.5s;">✦</span>
+    </div>
+
+    <div class="envelope" id="envelope">
+      <div class="envelope-corpo"></div>
+      <div class="envelope-flap"></div>
+      <img class="envelope-selo" src="img/selo-mf.png" alt="" aria-hidden="true">
+    </div>
+
+    <p class="envelope-titulo">Marina · Quinze Anos</p>
+
+    <button class="botao-ouro envelope-botao" id="abrir-convite" type="button">
+      Abrir convite
+    </button>
+  </div>
+
   <!-- ============ HERO (vídeo-convite) ============ -->
-  <header class="hero" id="inicio">
+  <header class="hero" id="inicio" inert>
     <div class="hero-frame">
       <video
         class="hero-video"
         src="video/convite-hero.mp4"
         poster="video/convite-poster.jpg"
-        autoplay
         muted
         loop
         playsinline
@@ -33,13 +57,17 @@
         <span id="som-texto">Ativar som</span>
       </button>
 
+      <a href="#contagem" class="scroll-cue" aria-label="Rolar para baixo">
+        <span aria-hidden="true">⌄</span>
+      </a>
+
       <p class="sr-only">
         Marina Fernandes da Silva — Quinze Anos. 31 de outubro de 2026, Goiânia.
       </p>
     </div>
   </header>
 
-  <main>
+  <main inert>
 
     <!-- ============ CONTAGEM REGRESSIVA ============ -->
     <section class="secao secao-clara" id="contagem">
@@ -75,6 +103,12 @@
 
     <!-- ============ MENSAGEM ============ -->
     <section class="secao secao-vinho" id="mensagem">
+      <div class="brilhos" aria-hidden="true">
+        <span class="brilho" style="top:15%; left:8%;  font-size:0.7rem; animation-delay:0.2s;">✦</span>
+        <span class="brilho" style="top:75%; left:90%; font-size:0.8rem; animation-delay:1s;">✦</span>
+        <span class="brilho" style="top:88%; left:6%;  font-size:0.5rem; animation-delay:1.8s;">✦</span>
+        <span class="brilho" style="top:6%;  left:92%; font-size:0.6rem; animation-delay:0.7s;">✦</span>
+      </div>
       <div class="container mensagem-grid">
         <figure class="selo-wrap reveal">
           <img src="img/selo-mf.png" alt="Selo dourado com o monograma MF">
@@ -111,7 +145,7 @@
           <div class="info-card">
             <span class="info-icone" aria-hidden="true">✦</span>
             <h3>Horário</h3>
-            <p>A partir das 21h</p>
+            <p>A partir das 20h</p>
           </div>
           <div class="info-card">
             <span class="info-icone" aria-hidden="true">✦</span>
@@ -133,6 +167,12 @@
 
     <!-- ============ RSVP ============ -->
     <section class="secao secao-vinho" id="rsvp">
+      <div class="brilhos" aria-hidden="true">
+        <span class="brilho" style="top:10%; left:12%; font-size:0.6rem; animation-delay:0.4s;">✦</span>
+        <span class="brilho" style="top:20%; left:85%; font-size:0.9rem; animation-delay:1.4s;">✦</span>
+        <span class="brilho" style="top:82%; left:20%; font-size:0.7rem; animation-delay:2s;">✦</span>
+        <span class="brilho" style="top:70%; left:92%; font-size:0.5rem; animation-delay:0.9s;">✦</span>
+      </div>
       <div class="container centro reveal">
         <p class="eyebrow claro">Confirmação de presença</p>
         <h2 class="titulo-secao claro">Você vem celebrar comigo?</h2>
@@ -150,7 +190,12 @@
   </main>
 
   <!-- ============ RODAPÉ ============ -->
-  <footer class="rodape">
+  <footer class="rodape" inert>
+    <div class="brilhos" aria-hidden="true">
+      <span class="brilho" style="top:15%; left:15%; font-size:0.6rem; animation-delay:0.5s;">✦</span>
+      <span class="brilho" style="top:25%; left:85%; font-size:0.7rem; animation-delay:1.3s;">✦</span>
+      <span class="brilho" style="top:80%; left:10%; font-size:0.5rem; animation-delay:2s;">✦</span>
+    </div>
     <img class="rodape-monograma" src="img/monograma-mf.png" alt="" aria-hidden="true">
     <p class="rodape-frase">Te espero lá</p>
     <p class="rodape-data">31 · 10 · 2026</p>

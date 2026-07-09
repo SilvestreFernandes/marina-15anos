@@ -8,7 +8,7 @@
 
 // Data e hora da festa (horário de Brasília, GMT-3).
 // Se o horário mudar, altere apenas esta linha:
-const DATA_FESTA = new Date('2026-10-31T21:00:00-03:00');
+const DATA_FESTA = new Date('2026-10-31T20:00:00-03:00');
 
 // Link do Google Forms de confirmação de presença.
 // Troque o texto abaixo pelo link real do formulário:
@@ -83,6 +83,41 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.reveal').forEach((elemento) => observer.observe(elemento));
+
+/* ----------------------------------------------------------
+   ENVELOPE — porta de entrada do convite
+   ---------------------------------------------------------- */
+
+const envelopeGate = document.getElementById('envelope-gate');
+const envelope = document.getElementById('envelope');
+const btnAbrir = document.getElementById('abrir-convite');
+
+document.body.classList.add('gate-ativo');
+
+if (envelopeGate && envelope && btnAbrir) {
+  btnAbrir.addEventListener('click', () => {
+    envelope.classList.add('aberto');
+    btnAbrir.disabled = true;
+
+    setTimeout(() => {
+      envelopeGate.classList.add('fechando');
+    }, 650);
+
+    setTimeout(() => {
+      envelopeGate.style.display = 'none';
+      document.body.classList.remove('gate-ativo');
+
+      document.querySelector('header.hero')?.removeAttribute('inert');
+      document.querySelector('main')?.removeAttribute('inert');
+      document.querySelector('footer.rodape')?.removeAttribute('inert');
+
+      const heroVideoEl = document.querySelector('.hero-video');
+      if (heroVideoEl) {
+        heroVideoEl.play().catch(() => {});
+      }
+    }, 1350);
+  }, { once: true });
+}
 
 /* ----------------------------------------------------------
    VÍDEO DO HERO — som e movimento reduzido
