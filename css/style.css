@@ -129,7 +129,7 @@ img { max-width: 100%; display: block; }
 .envelope-botao {
   position: relative;
   z-index: 2;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
