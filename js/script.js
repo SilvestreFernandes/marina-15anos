@@ -112,7 +112,7 @@ if (envelopeGate && envelope && btnAbrir) {
       document.querySelector('footer.rodape')?.removeAttribute('inert');
 
       const heroVideoEl = document.querySelector('.hero-video');
-      if (heroVideoEl) {
+      if (heroVideoEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         heroVideoEl.play().catch(() => {});
       }
     }, 1350);
@@ -133,8 +133,6 @@ const prefereMenosMovimento =
 
 if (prefereMenosMovimento && heroVideo) {
   // Respeita a preferência do sistema: não roda sozinho, mostra o poster
-  heroVideo.removeAttribute('autoplay');
-  heroVideo.removeAttribute('loop');
   heroVideo.pause();
 }
 
@@ -151,4 +149,15 @@ if (heroVideo && somToggle) {
       heroVideo.play().catch(() => {});
     }
   });
+}
+
+// Ao terminar o vídeo, desce a página sozinha pra próxima seção
+if (heroVideo) {
+  heroVideo.addEventListener('ended', () => {
+    const proximaSecao = document.getElementById('contagem');
+    proximaSecao?.scrollIntoView({
+      behavior: prefereMenosMovimento ? 'auto' : 'smooth',
+      block: 'start',
+    });
+  }, { once: true });
 }
